@@ -10,7 +10,7 @@ class RenderObjectNode extends \Twig_Node_Expression_Function
         $this->addGetTemplate($compiler);
         $compiler->raw('->display(');
         $this->addTemplateArguments($compiler);
-        $compiler->raw(")");
+        $compiler->raw(')');
     }
 
     protected function addGetTemplate(\Twig_Compiler $compiler)
@@ -32,8 +32,7 @@ class RenderObjectNode extends \Twig_Node_Expression_Function
              ->repr($this->getAttribute('name'))
              ->raw(', ')
              ->repr($this->getLine())
-             ->raw(')')
-         ;
+             ->raw(')');
     }
 
     protected function addTemplateArguments(\Twig_Compiler $compiler)

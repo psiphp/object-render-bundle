@@ -2,9 +2,9 @@
 
 namespace Psi\Bundle\ObjectRender\Tests\Unit\DependencyInjection;
 
+use Psi\Bundle\ObjectRender\DependencyInjection\ObjectRenderExtension;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Psi\Bundle\ObjectRender\DependencyInjection\ObjectRenderExtension;
 
 class ObjectRenderExtensionTest extends \PHPUnit_Framework_TestCase
 {
@@ -23,12 +23,12 @@ class ObjectRenderExtensionTest extends \PHPUnit_Framework_TestCase
     public function testLocator()
     {
         $expectedMap = [
-            '\\Foobar\\BarFoo' => 'path'
+            '\\Foobar\\BarFoo' => 'path',
         ];
         $this->extension->load([
             [
-                'mapping' => $expectedMap 
-            ]
+                'mapping' => $expectedMap,
+            ],
         ], $this->container);
 
         $definition = $this->container->getDefinition('psi_object_render.template.locator');
@@ -46,9 +46,9 @@ class ObjectRenderExtensionTest extends \PHPUnit_Framework_TestCase
                 'mapping' => [
                     '\\Foobar\\BarFoo' => 'path',
                     '\\Foobar' => 'path/to',
-                    '\\Foobar\\BarFoo\\Foobar' => 'path'
-                ]
-            ]
+                    '\\Foobar\\BarFoo\\Foobar' => 'path',
+                ],
+            ],
         ], $this->container);
 
         $definition = $this->container->getDefinition('psi_object_render.template.locator');

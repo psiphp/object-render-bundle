@@ -2,8 +2,8 @@
 
 namespace Psi\Bundle\ObjectRender\Tests\Functional\Twig;
 
-use Psi\Bundle\ObjectRender\Twig\ObjectRenderExtension;
 use Psi\Bundle\ObjectRender\Template\Locator;
+use Psi\Bundle\ObjectRender\Twig\ObjectRenderExtension;
 
 class ExtensionTest extends \PHPUnit_Framework_TestCase
 {
@@ -11,7 +11,7 @@ class ExtensionTest extends \PHPUnit_Framework_TestCase
     {
         $this->twig = new \Twig_Environment(
             new \Twig_Loader_Filesystem([
-                __DIR__ . '/templates'
+                __DIR__ . '/templates',
             ]),
             [
                 'debug' => true,
@@ -21,7 +21,7 @@ class ExtensionTest extends \PHPUnit_Framework_TestCase
         $this->twig->addExtension(
             new ObjectRenderExtension(
                 new Locator([
-                    'Psi\\Bundle\\ObjectRender\\Tests\\Functional\\Twig' => 'objects'
+                    'Psi\\Bundle\\ObjectRender\\Tests\\Functional\\Twig' => 'objects',
                 ], 'html.twig')
             )
         );
@@ -32,7 +32,7 @@ class ExtensionTest extends \PHPUnit_Framework_TestCase
         $output = $this->twig->render('render_object.html.twig', [
             'object' => new Test(),
         ]);
-        $this->assertEquals(<<<EOT
+        $this->assertEquals(<<<'EOT'
 Hello Daniel!
 
 

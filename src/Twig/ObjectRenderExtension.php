@@ -2,8 +2,8 @@
 
 namespace Psi\Bundle\ObjectRender\Twig;
 
-use Psi\Bundle\ObjectRender\Twig\Node\RenderObjectNode;
 use Psi\Bundle\ObjectRender\Template\Locator;
+use Psi\Bundle\ObjectRender\Twig\Node\RenderObjectNode;
 
 class ObjectRenderExtension extends \Twig_Extension
 {
@@ -18,16 +18,17 @@ class ObjectRenderExtension extends \Twig_Extension
     {
         return [
             new \Twig_SimpleFunction('psi_render_object', null, [
-                'node_class' => RenderObjectNode::class
+                'node_class' => RenderObjectNode::class,
             ], [
-                'is_safe' => [ 'html' ]
-            ])
+                'is_safe' => ['html'],
+            ]),
         ];
     }
 
     public function locateFile($object)
     {
         $reflection = new \ReflectionClass($object);
+
         return $this->locator->locate($reflection);
     }
 }
