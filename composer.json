@@ -1,0 +1,37 @@
+{
+    "name": "psiphp/object-template-bundle",
+    "description": "Locate and render Twig templates based on object FCQNs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Leech",
+            "email": "daniel@dantleech.com"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "^2.8",
+        "twig/twig": "^1.27"
+    },
+    "require-dev": {
+        "symfony/console": "^2.8",
+        "symfony/yaml": "^2.8",
+        "symfony/process": "^2.8",
+        "phpunit/phpunit": "@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "Psi\\Bundle\\ObjectTemplate\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Psi\\Bundle\\ObjectTemplate\\Tests\\": "tests/",
+            "Psi\\Bundle\\ObjectTemplate\\Example\\": "example/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
