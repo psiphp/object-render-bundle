@@ -42,7 +42,6 @@ class Locator
 
     private function resolvePath($classFqn): array
     {
-        $resolved = null;
         foreach ($this->map as $namespace => $path) {
             if ($namespace === $classFqn) {
                 continue;

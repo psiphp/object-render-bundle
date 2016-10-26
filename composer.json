@@ -10,7 +10,7 @@
     ],
     "require": {
         "symfony/framework-bundle": "^2.8",
-        "twig/twig": "^1.27"
+        "twig/twig": "^1.0"
     },
     "require-dev": {
         "symfony/console": "^2.8",
