@@ -49,18 +49,13 @@ class Locator
             }
 
             if (0 === strpos($classFqn, $namespace)) {
-                $resolved = [$namespace, $path];
-                break;
+                return [$namespace, $path];
             }
         }
 
-        if (null === $resolved) {
-            throw new \InvalidArgumentException(sprintf(
-                'Could not resolve path for class "%s" in namespaces: "%s"',
-                $classFqn, implode('", "', array_keys($this->map))
-            ));
-        }
-
-        return $resolved;
+        throw new \InvalidArgumentException(sprintf(
+            'Could not resolve path for class "%s" in namespaces: "%s"',
+            $classFqn, implode('", "', array_keys($this->map))
+        ));
     }
 }
