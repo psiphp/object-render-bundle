@@ -7,7 +7,7 @@
     >
 
     <testsuites>
-        <testsuite name="ObjectTemplate">
+        <testsuite name="ObjectRender">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>

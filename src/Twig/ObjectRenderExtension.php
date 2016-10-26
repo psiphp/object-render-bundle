@@ -1,11 +1,11 @@
 <?php
 
-namespace Psi\Bundle\ObjectTemplate\Twig;
+namespace Psi\Bundle\ObjectRender\Twig;
 
-use Psi\Bundle\ObjectTemplate\Twig\Node\RenderObjectNode;
-use Psi\Bundle\ObjectTemplate\Template\Locator;
+use Psi\Bundle\ObjectRender\Twig\Node\RenderObjectNode;
+use Psi\Bundle\ObjectRender\Template\Locator;
 
-class ObjectTemplateExtension extends \Twig_Extension
+class ObjectRenderExtension extends \Twig_Extension
 {
     private $locator;
 

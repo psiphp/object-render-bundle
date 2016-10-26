@@ -1,22 +1,14 @@
 <?php
 
-namespace Psi\Bundle\ObjectTemplate\DependencyInjection;
+namespace Psi\Bundle\ObjectRender\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
-/**
- * This is the class that loads and manages your bundle configuration.
- *
- * @link http://symfony.com/doc/current/cookbook/bundles/extension.html
- */
-class ObjectTemplateExtension extends Extension
+class ObjectRenderExtension extends Extension
 {
-    /**
-     * {@inheritdoc}
-     */
     public function load(array $configs, ContainerBuilder $container)
     {
         $configuration = new Configuration();
@@ -24,5 +16,14 @@ class ObjectTemplateExtension extends Extension
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
+
+        $locator = $container->getDefinition('psi_object_render.template.locator');
+
+        // sort by namespace length
+        $mapping = $config['mapping'];
+        uksort($mapping, function ($one, $two) {
+            return strlen($two) - strlen($one);
+        });
+        $locator->replaceArgument(0, $mapping);
     }
 }

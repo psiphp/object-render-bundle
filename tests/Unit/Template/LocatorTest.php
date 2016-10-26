@@ -1,8 +1,8 @@
 <?php
 
-namespace Psi\Bundle\ObjectTemplate\Tests\Unit\Template;
+namespace Psi\Bundle\ObjectRender\Tests\Unit\Template;
 
-use Psi\Bundle\ObjectTemplate\Template\Locator;
+use Psi\Bundle\ObjectRender\Template\Locator;
 
 class LocatorTest extends \PHPUnit_Framework_TestCase
 {

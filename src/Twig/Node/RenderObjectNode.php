@@ -1,6 +1,6 @@
 <?php
 
-namespace Psi\Bundle\ObjectTemplate\Twig\Node;
+namespace Psi\Bundle\ObjectRender\Twig\Node;
 
 class RenderObjectNode extends \Twig_Node_Expression_Function
 {
@@ -26,7 +26,7 @@ class RenderObjectNode extends \Twig_Node_Expression_Function
         $objectArg = $args->getNode(0);
         $compiler
              ->write('$this->loadTemplate(')
-             ->write('$this->env->getExtension("Psi\Bundle\ObjectTemplate\Twig\ObjectTemplateExtension")->locateFile(')
+             ->write('$this->env->getExtension("Psi\Bundle\ObjectRender\Twig\ObjectRenderExtension")->locateFile(')
              ->subcompile($objectArg)
              ->raw('), ')
              ->repr($this->getAttribute('name'))

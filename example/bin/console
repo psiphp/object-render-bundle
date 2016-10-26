@@ -4,7 +4,7 @@
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Debug\Debug;
-use Psi\Bundle\ObjectTemplate\Example\app\AppKernel;
+use Psi\Bundle\ObjectRender\Example\app\AppKernel;
 
 // if you don't want to setup permissions the proper way, just uncomment the following PHP line
 // read http://symfony.com/doc/current/book/installation.html#configuration-and-setup for more information

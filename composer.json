@@ -1,6 +1,6 @@
 {
-    "name": "psiphp/object-template-bundle",
-    "description": "Locate and render Twig templates based on object FCQNs",
+    "name": "psiphp/object-render-bundle",
+    "description": "Locate and render Twig templates based on object FQCNs",
     "license": "MIT",
     "authors": [
         {
@@ -20,13 +20,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Psi\\Bundle\\ObjectTemplate\\": "src/"
+            "Psi\\Bundle\\ObjectRender\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Psi\\Bundle\\ObjectTemplate\\Tests\\": "tests/",
-            "Psi\\Bundle\\ObjectTemplate\\Example\\": "example/"
+            "Psi\\Bundle\\ObjectRender\\Tests\\": "tests/",
+            "Psi\\Bundle\\ObjectRender\\Example\\": "example/"
         }
     },
     "extra": {

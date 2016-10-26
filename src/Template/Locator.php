@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Psi\Bundle\ObjectTemplate\Template;
+namespace Psi\Bundle\ObjectRender\Template;
 
 /**
  * Determine a file path from a given class reflection class.

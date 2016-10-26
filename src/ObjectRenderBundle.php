@@ -1,6 +1,6 @@
 <?php
 
-namespace Psi\Bundle\ObjectTemplate;
+namespace Psi\Bundle\ObjectRender;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

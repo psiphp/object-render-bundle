@@ -1,6 +1,6 @@
 <?php
 
-namespace Psi\Bundle\ObjectTemplate\Example\app;
+namespace Psi\Bundle\ObjectRender\Example\app;
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -11,7 +11,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new \Psi\Bundle\ObjectTemplate\ObjectTemplateBundle()
+            new \Psi\Bundle\ObjectRender\ObjectRenderBundle()
         ];
 
         return $bundles;

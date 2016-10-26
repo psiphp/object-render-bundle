@@ -1,9 +1,9 @@
 <?php
 
-namespace Psi\Bundle\ObjectTemplate\Tests\Functional\Twig;
+namespace Psi\Bundle\ObjectRender\Tests\Functional\Twig;
 
-use Psi\Bundle\ObjectTemplate\Twig\ObjectTemplateExtension;
-use Psi\Bundle\ObjectTemplate\Template\Locator;
+use Psi\Bundle\ObjectRender\Twig\ObjectRenderExtension;
+use Psi\Bundle\ObjectRender\Template\Locator;
 
 class ExtensionTest extends \PHPUnit_Framework_TestCase
 {
@@ -19,9 +19,9 @@ class ExtensionTest extends \PHPUnit_Framework_TestCase
             ]
         );
         $this->twig->addExtension(
-            new ObjectTemplateExtension(
+            new ObjectRenderExtension(
                 new Locator([
-                    'Psi\\Bundle\\ObjectTemplate\\Tests\\Functional\\Twig' => 'objects'
+                    'Psi\\Bundle\\ObjectRender\\Tests\\Functional\\Twig' => 'objects'
                 ], 'html.twig')
             )
         );

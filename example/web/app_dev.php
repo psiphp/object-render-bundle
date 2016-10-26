@@ -2,7 +2,7 @@
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Debug\Debug;
-use Psi\Bundle\ObjectTemplate\Example\app\AppKernel;
+use Psi\Bundle\ObjectRender\Example\app\AppKernel;
 
 require(__DIR__ . '/../../vendor/autoload.php');
 
