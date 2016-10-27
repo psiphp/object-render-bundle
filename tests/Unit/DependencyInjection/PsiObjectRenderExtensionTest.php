@@ -2,11 +2,11 @@
 
 namespace Psi\Bundle\ObjectRender\Tests\Unit\DependencyInjection;
 
-use Psi\Bundle\ObjectRender\DependencyInjection\ObjectRenderExtension;
+use Psi\Bundle\ObjectRender\DependencyInjection\PsiObjectRenderExtension;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class ObjectRenderExtensionTest extends \PHPUnit_Framework_TestCase
+class PsiObjectRenderExtensionTest extends \PHPUnit_Framework_TestCase
 {
     private $container;
     private $extension;
@@ -14,7 +14,7 @@ class ObjectRenderExtensionTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->container = new ContainerBuilder();
-        $this->extension = new ObjectRenderExtension();
+        $this->extension = new PsiObjectRenderExtension();
     }
 
     /**

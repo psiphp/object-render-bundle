@@ -37,6 +37,10 @@ class RenderObjectNode extends \Twig_Node_Expression_Function
 
     protected function addTemplateArguments(\Twig_Compiler $compiler)
     {
-        $compiler->raw('$context');
+        $object = $this->getNode('arguments');
+        $object = $object->getNode(0);
+        $compiler->raw('[ "object" => ');
+        $compiler->subcompile($object);
+        $compiler->raw(']');
     }
 }

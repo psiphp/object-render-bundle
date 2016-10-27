@@ -12,6 +12,7 @@
 
         <service id="psi_object_render.twig.extension" class="Psi\Bundle\ObjectRender\Twig\ObjectRenderExtension">
             <argument type="service" id="psi_object_render.template.locator" />
+            <tag name="twig.extension" />
         </service>
     </services>
 </container>
