@@ -1,11 +1,13 @@
 # Psi Object Render Bundle
 
+[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 [![Build Status](https://travis-ci.org/psiphp/object-render-bundle.svg?branch=master)](https://travis-ci.org/psiphp/object-render-bundle)
 [![StyleCI](https://styleci.io/repos/71993110/shield)](https://styleci.io/repos/71993110)
 [![Scrutinizer Code
 Quality](https://scrutinizer-ci.com/g/psiphp/object-render-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/psiphp/object-render-bundle/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/psiphp/object-render-bundle/version.png)](https://packagist.org/packages/psiphp/object-render-bundle)
-[![Total Downloads](https://poser.pugx.org/psiphp/content-type/d/total.png)](https://packagist.org/packages/psiphp/object-render-bundle)
+[![Latest Stable Version](https://poser.pugx.org/psiphp/object-render-bundle/version.png?format=plastic)](https://packagist.org/packages/psiphp/object-render-bundle)
+[![Total Downloads](https://poser.pugx.org/psiphp/object-render-bundle/d/total.png?format=plastic)](https://packagist.org/packages/psiphp/object-render-bundle)
+
 
 This component is part of the Psi Content Management Framework
 
