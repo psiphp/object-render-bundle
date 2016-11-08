@@ -13,9 +13,9 @@
         "twig/twig": "^1.0"
     },
     "require-dev": {
-        "symfony/console": "^2.8",
-        "symfony/yaml": "^2.8",
-        "symfony/process": "^2.8",
+        "symfony/console": "^3.0",
+        "symfony/yaml": "^3.0",
+        "symfony/process": "^3.0",
         "phpunit/phpunit": "@stable"
     },
     "autoload": {
