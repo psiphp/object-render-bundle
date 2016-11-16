@@ -17,7 +17,7 @@ class ObjectRenderExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('psi_render_object', null, [
+            new \Twig_SimpleFunction('psi_object_render', null, [
                 'node_class' => RenderObjectNode::class,
             ], [
                 'is_safe' => ['html'],

@@ -24,15 +24,28 @@ class RenderObjectNode extends \Twig_Node_Expression_Function
             ));
         }
         $objectArg = $args->getNode(0);
-        $compiler
-             ->write('$this->loadTemplate(')
-             ->write('$this->env->getExtension("Psi\Bundle\ObjectRender\Twig\ObjectRenderExtension")->locateFile(')
-             ->subcompile($objectArg)
-             ->raw('), ')
-             ->repr($this->getAttribute('name'))
-             ->raw(', ')
-             ->repr($this->getLine())
-             ->raw(')');
+
+        $variant = null;
+        if ($args->hasNode(1)) {
+            $variant = $args->getNode(1);
+        }
+        $node = $compiler
+            ->write('$this->loadTemplate(')
+            ->write('$this->env->getExtension("Psi\Bundle\ObjectRender\Twig\ObjectRenderExtension")->locateFile(')
+            ->subcompile($objectArg);
+
+        if ($variant) {
+            $node
+                ->raw(', ')
+                ->subCompile($variant);
+        }
+
+        $node
+            ->raw('), ')
+            ->repr($this->getAttribute('name'))
+            ->raw(', ')
+            ->repr($this->getLine())
+            ->raw(')');
     }
 
     protected function addTemplateArguments(\Twig_Compiler $compiler)

@@ -60,8 +60,8 @@ class LocatorTest extends \PHPUnit_Framework_TestCase
                 '\\Foobar\\Barfoo\\View\\ObjectView',
                 'html.twig',
                 '/path/to/a/View.ObjectView/variant_one.html.twig',
-                'variant_one'
-            ]
+                'variant_one',
+            ],
         ];
     }
 
