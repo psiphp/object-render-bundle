@@ -18,7 +18,7 @@ class LocatorTest extends \PHPUnit_Framework_TestCase
      *
      * @dataProvider provideLocate
      */
-    public function testLocate($classFqn, $suffix, $expectedFname)
+    public function testLocate($classFqn, $suffix, $expectedFname, $variant = null)
     {
         $resolver = $this->create([
             '\\Some\\Other\\Namespace' => '/path/to/d',
@@ -28,7 +28,7 @@ class LocatorTest extends \PHPUnit_Framework_TestCase
         ], $suffix);
 
         $this->reflection->getName()->willReturn($classFqn);
-        $result = $resolver->locate($this->reflection->reveal());
+        $result = $resolver->locate($this->reflection->reveal(), $variant);
 
         $this->assertEquals($expectedFname, $result);
     }
@@ -56,6 +56,12 @@ class LocatorTest extends \PHPUnit_Framework_TestCase
                 'php',
                 '/path/to/c/Foobar.Barfoo.php',
             ],
+            'with variant' => [
+                '\\Foobar\\Barfoo\\View\\ObjectView',
+                'html.twig',
+                '/path/to/a/View.ObjectView/variant_one.html.twig',
+                'variant_one'
+            ]
         ];
     }
 

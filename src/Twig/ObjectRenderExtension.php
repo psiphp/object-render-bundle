@@ -25,10 +25,10 @@ class ObjectRenderExtension extends \Twig_Extension
         ];
     }
 
-    public function locateFile($object)
+    public function locateFile($object, string $variant = null)
     {
         $reflection = new \ReflectionClass($object);
 
-        return $this->locator->locate($reflection);
+        return $this->locator->locate($reflection, $variant);
     }
 }

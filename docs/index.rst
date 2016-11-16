@@ -39,3 +39,14 @@ object named ``object``:
     <h2>{{ object.title }}</h2>
     <p>{{ object.body }}</p>
 
+Variants
+--------
+
+Variants provide a way to render a variation of the default template.
+
+.. code-block:: jinja
+
+    <h1>Posts</h1>
+    {{ psi_render_object(post, 'italicized') }}
+
+Will cause the template at ``path/to/templates/models/Post/italicized.html.twig`` to be rendered.
