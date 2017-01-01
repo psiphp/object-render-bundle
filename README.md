@@ -16,8 +16,7 @@ based on an objects FQCN.
 
 ## Documentation
 
-You can find out more about this component and others
-[here](https://psiphp.readthedocs.io/en/latest/components/object-render-bundle/docs/index.html).
+See the documentation in [doc/index.rst](https://github.com/psiphp/object-render-bundle/blob/master/docs/index.rst).
 
 ## Installation
 
