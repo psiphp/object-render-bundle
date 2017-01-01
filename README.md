@@ -14,9 +14,10 @@ This component is part of the Psi Content Management Framework
 The object render bundle allows Twig templates to be located and rendered
 based on an objects FQCN.
 
+
 ## Documentation
 
-See the documentation in [doc/index.rst](https://github.com/psiphp/object-render-bundle/blob/master/docs/index.rst).
+Documentation is in progress, there may be documentation in [doc/index.rst](https://github.com/psiphp/object-render-bundle/blob/master/docs/index.rst).
 
 ## Installation
 
