@@ -21,7 +21,7 @@ class Locator
         $this->map = $map;
     }
 
-    public function locate(\ReflectionClass $class): string
+    public function locate(\ReflectionClass $class, string $variant = null): string
     {
         list($resolvedNs, $basePath) = $this->resolvePath($class->getName());
 
@@ -30,14 +30,31 @@ class Locator
             $fname = substr($fname, 1);
         }
 
-        $fpath = sprintf(
-            '%s/%s.%s',
-            $basePath,
-            $fname,
-            ($this->extension ? $this->extension : '')
-        );
+        $fpath = $this->getTemplatePath($basePath, $fname, $variant);
 
         return $fpath;
+    }
+
+    private function getTemplatePath(string $basePath, string $fname, string $variant = null)
+    {
+        $extension = ($this->extension ? $this->extension : '');
+
+        if (null === $variant) {
+            return sprintf(
+                '%s/%s.%s',
+                $basePath,
+                $fname,
+                $extension
+            );
+        }
+
+        return sprintf(
+            '%s/%s/%s.%s',
+            $basePath,
+            $fname,
+            $variant,
+            $extension
+        );
     }
 
     private function resolvePath($classFqn): array

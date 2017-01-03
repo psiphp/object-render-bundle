@@ -27,13 +27,32 @@ class ExtensionTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-    public function testExtension()
+    /**
+     * It should render the defaut template.
+     */
+    public function testDefault()
     {
-        $output = $this->twig->render('render_object.html.twig', [
+        $output = $this->twig->render('object_render.html.twig', [
             'object' => new Test(),
         ]);
         $this->assertEquals(<<<'EOT'
 Hello Daniel!
+
+
+EOT
+        , $output);
+    }
+
+    /**
+     * It should render a variant.
+     */
+    public function testVariant()
+    {
+        $output = $this->twig->render('object_render_variant.html.twig', [
+            'object' => new Test(),
+        ]);
+        $this->assertEquals(<<<'EOT'
+This is a variant!
 
 
 EOT

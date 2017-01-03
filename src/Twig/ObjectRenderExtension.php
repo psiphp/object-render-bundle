@@ -17,7 +17,7 @@ class ObjectRenderExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('psi_render_object', null, [
+            new \Twig_SimpleFunction('psi_object_render', null, [
                 'node_class' => RenderObjectNode::class,
             ], [
                 'is_safe' => ['html'],
@@ -25,10 +25,10 @@ class ObjectRenderExtension extends \Twig_Extension
         ];
     }
 
-    public function locateFile($object)
+    public function locateFile($object, string $variant = null)
     {
         $reflection = new \ReflectionClass($object);
 
-        return $this->locator->locate($reflection);
+        return $this->locator->locate($reflection, $variant);
     }
 }
